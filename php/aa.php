@@ -3,24 +3,23 @@
 require 'init.php';
 
 
-$stn = $_POST["uname"];
-$gid = $_POST["gid"];
-$sid = $_POST["sid"];
-$cid = $_POST["cid"];
+$stn = $_GET["uname"];
+$gid = $_GET["gid"];
+$sid = $_GET["sid"];
+$cid = $_GET["cid"];
 
 // $zero = $_POST["zero"];
 // $one = $_POST["one"];
 
 // $a1 = $_POST["a1"];
 
-$fmarks = $_POST["fmarks"];
+$fmarks = $_GET["fmarks"];
 $amarks = (int)$fmarks;
 
-$marks = $_POST["fmarks"];
 
     if($amarks <= 1){
         
-        $sql = "INSERT INTO usersim(gid,uname,sid,cid,fmarks,marks,aa) VALUES('$gid','$stn','$sid','$cid','$fmarks','$marks','$fmarks')";
+        $sql = "INSERT INTO usersim(gid,uname,sid,cid,fmarks,marks,aa) VALUES('$gid','$stn','$sid','$cid','$fmarks','$fmarks','$fmarks')";
         if(mysqli_query($con, $sql)){
             echo "success";
     }
