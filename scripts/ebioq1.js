@@ -2,12 +2,16 @@ window.addEventListener('load',() => {
 	
 	const params = (new URL(document.location)).searchParams;
 	const uname = params.get('uname');
-	const grade = params.get('grade');
-    const marks = params.get('marks');
+	const gid = params.get('gid');
+    const sid = params.get('sid');
+    const cid = params.get('cid');
+    const fmarks = params.get('fmarks');
 
 	document.getElementById('uname-re').innerHTML = uname;
-	document.getElementById('grade-re').innerHTML = grade;
-    document.getElementById('marks-re').innerHTML = marks;
+	document.getElementById('gid-re').innerHTML = gid;
+    document.getElementById('sid-re').innerHTML = sid;
+    document.getElementById('cid-re').innerHTML = cid;
+    document.getElementById('fmarks-re').innerHTML = fmarks;
 
 })
 
