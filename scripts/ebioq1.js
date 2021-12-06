@@ -7,11 +7,11 @@ window.addEventListener('load',() => {
     const cid = params.get('cid');
     const fmarks = params.get('fmarks');
 
-	document.getElementById('uname-re').innerHTML = uname;
-	document.getElementById('gid-re').innerHTML = gid;
-    document.getElementById('sid-re').innerHTML = sid;
-    document.getElementById('cid-re').innerHTML = cid;
-    document.getElementById('fmarks-re').innerHTML = fmarks;
+	document.getElementById('uname').innerHTML = uname;
+	document.getElementById('gid').innerHTML = gid;
+    document.getElementById('sid').innerHTML = sid;
+    document.getElementById('cid').innerHTML = cid;
+    document.getElementById('fmarks').innerHTML = fmarks;
 
 })
 
