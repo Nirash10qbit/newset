@@ -1,15 +1,29 @@
+window.addEventListener('load',() => {
+	
+	const params = (new URL(document.location)).searchParams;
+	const uname = params.get('uname');
+	const grade = params.get('grade');
+    const marks = params.get('marks');
+
+	document.getElementById('uname-re').innerHTML = uname;
+	document.getElementById('grade-re').innerHTML = grade;
+    document.getElementById('marks-re').innerHTML = marks;
+
+})
 
 $(document).ready(function () {
     twoByTwo();
 
     pageLoadValues();
+    VisibleFalseImages();
+    hideInputs();
 });
  
 
 function twoByTwo() 
 {
    var genarateTag = "";
-    genarateTag += "<div class='card card-body border-0' style='background-color:  #7acdfe; font-size: 10px;' >";
+    genarateTag += "<div class='card border-0' style='background-color:  #7acdfe; font-size: 13px;' >";
     genarateTag += "<table >";
     for (let tr = 0; tr < 3; tr++) {
         genarateTag += "  <tr id='tbtTR"+tr+"'  >";
@@ -83,6 +97,30 @@ $('#TR2TD1').text('('+$('#TR0TD1').val()+'' + $('#LTR0TD1').val()+')  ('+($('#TR
 
 $('#TR2TD2').text('('+$('#TR0TD2').val()+')'+'('+$('#TR2TD0').val()+')');
 
+
+
+
+// $('#TR1TD1').text('');
+// $('#TR1TD1').append((parseFloat($('#TR1TD0').val())*parseFloat($('#TR0TD1').val())))
+// .append($('#LTR1TD0').val()+'<sup>2</sup>' );
+
+// $('#TR1TD2').text('');
+// $('#TR1TD2').append((parseFloat($('#TR1TD0').val())*parseFloat($('#TR0TD2').val()))).append($('#LTR1TD0').val());
+
+
+// $('#TR2TD1').text('');
+// $('#TR2TD1').append((parseFloat($('#TR0TD1').val())*parseFloat($('#TR2TD0').val()))).append($('#LTR1TD0').val());
+
+// $('#TR2TD2').text('');
+//  $('#TR2TD2').append(parseFloat($('#TR2TD0').val())*parseFloat($('#TR0TD2').val()));
+
+
+$('#num1').text('('+($('#TR0TD1').val()+'' + $('#LTR1TD0').val())+') ');
+$('#num2').text('('+$('#TR0TD2').val()+') ');
+
+$('#num3').text('('+($('#TR1TD0').val()+'' + $('#LTR1TD0').val())+') ');
+$('#num4').text('('+$('#TR2TD0').val()+') ');
+
 $('#Acol').text('('+($('#TR1TD0').val()+'' + $('#LTR1TD0').val())+'+'+$('#TR2TD0').val()+') ');
 $('#Arow').text('('+($('#TR0TD1').val()+'' + $('#LTR1TD0').val())+'+'+$('#TR0TD2').val()+') ');
 
@@ -113,8 +151,7 @@ $('#Ans3').append((parseFloat($('#TR1TD0').val())*parseFloat($('#TR0TD1').val())
 .append(parseFloat($('#TR2TD0').val())*parseFloat($('#TR0TD2').val()));
 
 $('#Ans4').text('');
-$('#Ans4').append((parseFloat($('#TR1TD0').val())*parseFloat($('#TR0TD1').val())))
-.append($('#LTR1TD0').val()+'<sup>2</sup>' )
+$('#Ans4').append($('#LTR1TD0').val()+'<sup>2</sup>' )
 .append(' + ')
 .append((parseFloat($('#TR0TD1').val())*parseFloat($('#TR2TD0').val()))+(parseFloat($('#TR1TD0').val())*parseFloat($('#TR0TD2').val()))).append($('#LTR1TD0').val())
 .append(' + ')
@@ -133,9 +170,59 @@ $('#Ans7').append((parseFloat($('#TR1TD0').val())*parseFloat($('#TR0TD1').val())
   }
 
   function pageLoadValues(){
-    $('#TR0TD1').val(1);
-    $('#TR0TD2').val(1);
-    $('#TR1TD0').val(1);
-    $('#TR2TD0').val(1);
+    $('#TR0TD1').val(3);
+    $('#TR0TD2').val(4);
+    $('#TR1TD0').val(5);
+    $('#TR2TD0').val(2);
+    
     formula();
 }
+
+   function hideInputs(){
+    $('#TR0TD1').hide();
+    $('#LTR0TD1').hide();
+    $('#TR0TD2').hide();
+    $('#TR1TD0').hide();
+    $('#LTR1TD0').hide();
+    $('#TR2TD0').hide();
+    }
+
+    function VisibleFalseImages(){
+        $('#im1').css('visibility', 'hidden');
+        $('#im2').css('visibility', 'hidden');
+     }
+     
+     function VisibleTrueImages(){
+         $('#im1').css('visibility', 'visible');
+         $('#im2').css('visibility', 'visible');
+      }
+
+//    function next(){
+    // var num = document.getElementById("aa").value;
+
+    // if(num == "15"){
+    // const acorr = "1";
+	// const amarks = "20";
+
+	// localStorage.setItem("ACORR", acorr);
+	// localStorage.setItem("AMARKS",  amarks);
+    // $('#im2').show();
+	// return;
+    // }
+    // else{
+    //     alert("0");
+    // const acorr = "0";
+	// const amarks = "0";
+
+	// localStorage.setItem("ACORR", acorr);
+	// localStorage.setItem("AMARKS",  amarks);
+    // $('#im1').show();
+	// return;
+    // }
+    // }
+
+
+    function next(){
+        $('#im1').show(); 
+
+    }
