@@ -35,7 +35,7 @@ function drop(event) {
 function check(action) {
     var text = "";
     if (action == 'A') {
-        $('.example-table').css('background-image', 'url(../Images/SetA.png)');
+        $('.example-table').css('background-image', 'url(../Images/SetAn.png)');
         var list = document.getElementById('divSetA').children;
         for (var i = 0; i < list.length; i++) {
             var el = list[i].lastChild;
