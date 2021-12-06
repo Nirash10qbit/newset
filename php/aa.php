@@ -20,7 +20,7 @@ $marks = $_POST["fmarks"];
 
     if($amarks <= 1){
         
-        $sql = "INSERT INTO usersim(gid,uname,sid,cid,fmarks,marks,a1) VALUES('$gid','$stn','$sid','$cid','$fmarks','$marks','$fmarks')";
+        $sql = "INSERT INTO usersim(gid,uname,sid,cid,fmarks,marks,aa) VALUES('$gid','$stn','$sid','$cid','$fmarks','$marks','$fmarks')";
         if(mysqli_query($con, $sql)){
             echo "success";
     }
