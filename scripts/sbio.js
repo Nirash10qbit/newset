@@ -1,15 +1,24 @@
 
+
 $(document).ready(function () {
     twoByTwo();
 
     pageLoadValues();
+    VisibleFalseImages();
+    hideInputs();
+
+    $('#im1').hide();
+    $('#im2').hide();
+    $('#im3').hide();
+    $('#im4').hide();
+    
 });
  
 
 function twoByTwo() 
 {
    var genarateTag = "";
-    genarateTag += "<div class='card card-body border-0' style='background-color:  #7acdfe; font-size: 10px;' >";
+    genarateTag += "<div class='card border-0' style='background-color:  #7acdfe; font-size: 13px;' >";
     genarateTag += "<table >";
     for (let tr = 0; tr < 3; tr++) {
         genarateTag += "  <tr id='tbtTR"+tr+"'  >";
@@ -83,6 +92,30 @@ $('#TR2TD1').text('('+$('#TR0TD1').val()+'' + $('#LTR0TD1').val()+')  ('+($('#TR
 
 $('#TR2TD2').text('('+$('#TR0TD2').val()+')'+'('+$('#TR2TD0').val()+')');
 
+
+
+
+// $('#TR1TD1').text('');
+// $('#TR1TD1').append((parseFloat($('#TR1TD0').val())*parseFloat($('#TR0TD1').val())))
+// .append($('#LTR1TD0').val()+'<sup>2</sup>' );
+
+// $('#TR1TD2').text('');
+// $('#TR1TD2').append((parseFloat($('#TR1TD0').val())*parseFloat($('#TR0TD2').val()))).append($('#LTR1TD0').val());
+
+
+// $('#TR2TD1').text('');
+// $('#TR2TD1').append((parseFloat($('#TR0TD1').val())*parseFloat($('#TR2TD0').val()))).append($('#LTR1TD0').val());
+
+// $('#TR2TD2').text('');
+//  $('#TR2TD2').append(parseFloat($('#TR2TD0').val())*parseFloat($('#TR0TD2').val()));
+
+
+$('#num1').text('('+($('#TR0TD1').val()+'' + $('#LTR1TD0').val())+') ');
+$('#num2').text('('+$('#TR0TD2').val()+') ');
+
+$('#num3').text('('+($('#TR1TD0').val()+'' + $('#LTR1TD0').val())+') ');
+$('#num4').text('('+$('#TR2TD0').val()+') ');
+
 $('#Acol').text('('+($('#TR1TD0').val()+'' + $('#LTR1TD0').val())+'+'+$('#TR2TD0').val()+') ');
 $('#Arow').text('('+($('#TR0TD1').val()+'' + $('#LTR1TD0').val())+'+'+$('#TR0TD2').val()+') ');
 
@@ -101,9 +134,6 @@ $('#Ans2').text('('+($('#TR0TD1').val()+'' + $('#LTR1TD0').val())+')('+($('#TR1T
 
 $('#Ans3').text('');
 $('#Ans3').append((parseFloat($('#TR1TD0').val())*parseFloat($('#TR0TD1').val())))
-
-
-
 .append($('#LTR1TD0').val()+'<sup>2</sup>' )
 .append(' + ')
 .append((parseFloat($('#TR0TD1').val())*parseFloat($('#TR2TD0').val()))).append($('#LTR1TD0').val())
@@ -119,6 +149,8 @@ $('#Ans4').append((parseFloat($('#TR1TD0').val())*parseFloat($('#TR0TD1').val())
 .append((parseFloat($('#TR0TD1').val())*parseFloat($('#TR2TD0').val()))+(parseFloat($('#TR1TD0').val())*parseFloat($('#TR0TD2').val()))).append($('#LTR1TD0').val())
 .append(' + ')
 .append(parseFloat($('#TR2TD0').val())*parseFloat($('#TR0TD2').val()));
+
+
 
 $('#Ans7').text('');
 $('#Ans7').append((parseFloat($('#TR1TD0').val())*parseFloat($('#TR0TD1').val())))
@@ -137,5 +169,18 @@ $('#Ans7').append((parseFloat($('#TR1TD0').val())*parseFloat($('#TR0TD1').val())
     $('#TR0TD2').val(1);
     $('#TR1TD0').val(1);
     $('#TR2TD0').val(1);
+    
     formula();
 }
+
+
+
+    function VisibleFalseImages(){
+       
+     }
+     
+     function VisibleTrueImages(){
+         
+      }
+
+
