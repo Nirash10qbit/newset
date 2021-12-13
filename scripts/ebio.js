@@ -173,14 +173,7 @@ $('#Ans7').append((parseFloat($('#TR1TD0').val())*parseFloat($('#TR0TD1').val())
     formula();
 }
 
-//   function hideInputs(){
-//     $('#TR0TD1').hide();
-//     $('#LTR0TD1').hide();
-//     $('#TR0TD2').hide();
-//     $('#TR1TD0').hide();
-//     $('#LTR1TD0').hide();
-//     $('#TR2TD0').hide();
-//     }
+
 
     function VisibleFalseImages(){
        
